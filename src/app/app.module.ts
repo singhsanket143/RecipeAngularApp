@@ -5,8 +5,6 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from "./header/header.component";
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
-import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
-import {DropdownDirective} from "./shared/dropdown.directive";
 import {ShoppingListService} from "./shopping-list/shopping-list.service";
 import {AppRoutingModule} from "./app-routing.module";
 import {RecipeService} from "./recipes/recipe.service";
@@ -18,8 +16,8 @@ import {AuthService} from "./auth/auth.service";
 import {AuthGuardService} from "./auth/auth-guard.service";
 import {FormsModule} from "@angular/forms";
 import {RecipeModule} from "./recipes/recipe.module";
-import {RecipeRoutingModule} from "./recipes/recipe-routing.module";
-
+import {ShoppingEditComponent} from "./shopping-list/shopping-edit/shopping-edit.component";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -36,6 +34,7 @@ import {RecipeRoutingModule} from "./recipes/recipe-routing.module";
     HttpModule,
     AppRoutingModule,
     RecipeModule,
+    SharedModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
